@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@langchain/google-genai": "^0.1.8",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "langchain": "^0.3.15",
+    "mongoose": "^8.10.1",
+    "node-cron": "^3.0.3",
+    "openai": "^4.85.1",
+    "puppeteer": "^24.2.1",
+    "twilio": "^5.4.4"
+  }
+}
