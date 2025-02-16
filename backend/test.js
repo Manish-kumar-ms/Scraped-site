@@ -7,7 +7,13 @@ export const scrapeEvents = async () => {
     // Launch Puppeteer
     const browser = await puppeteer.launch({
         headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        executablePath: process.env.CHROME_EXECUTABLE_PATH || "/usr/bin/google-chrome",
+        args: [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-gpu",
+            "--disable-dev-shm-usage",
+        ],
     });
     const page = await browser.newPage();
 
