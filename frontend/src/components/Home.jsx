@@ -123,7 +123,7 @@ const Home = () => {
                 />
                 <input 
                     type="text"
-                    placeholder="Enter your WhatsApp number"
+                    placeholder="Enter your WhatsApp number in format +91XXXXXXXXXX"
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     className="w-full p-2 mb-4 border rounded bg-gray-700 text-white"
