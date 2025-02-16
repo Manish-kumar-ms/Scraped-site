@@ -5,13 +5,16 @@ export const scrapeEvents = async () => {
     const url = 'https://www.australia.com/en/events/australias-events-calendar.html'; // Target website
    
     // Launch Puppeteer
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
     const page = await browser.newPage();
 
     // Go to the target page
     await page.goto(url, { waitUntil: 'networkidle2' });
 
-
+ 
     // Extract event details 
     const events = await page.evaluate(() => {
         return Array.from(document.querySelectorAll('.common-events-calendar-results-tile-container')).map(event => {   //common-events-calendar-results-tile-container

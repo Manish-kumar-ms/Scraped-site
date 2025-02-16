@@ -37,14 +37,14 @@ export const recommendEvent = async (req, res) => {
         Available events: ${JSON.stringify(events)}`;
 
         const response = await model.invoke(prompt);
-         // ✅ Clean response by removing Markdown if it exists
+         //  Clean response by removing Markdown if it exists
          const cleanResponse = response.content.replace(/```json|```/g, "").trim();
 
         let recommendedEvents;
         try {
             recommendedEvents = JSON.parse(response.content);
         } catch (error) {
-            console.error("❌ Error parsing LLM response:", error);
+            console.error(" Error parsing LLM response:", error);
             return res.status(500).json({ success: false, message: "Error parsing recommendation from AI" });
         }
 
@@ -64,7 +64,7 @@ export const recommendEvent = async (req, res) => {
         return res.json({ success: true, recommendations: recommendedEvents });
 
     } catch (error) {
-        console.error("❌ Error in recommendEvent:", error);
+        console.error(" Error in recommendEvent:", error);
         return res.status(500).json({ success: false, message: "Error fetching recommendation", error: error.message });
     }
 };

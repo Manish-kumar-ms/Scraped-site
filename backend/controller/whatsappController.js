@@ -15,8 +15,8 @@ export const sendWhatsAppNotification = async (number, message) => {
             body: message,
         });
 
-        console.log(`✅ WhatsApp message sent to ${number}`);
+        console.log(` WhatsApp message sent to ${number}`);
     } catch (error) {
-        console.error("❌ Error sending WhatsApp message:", error.message);
+        console.error(" Error sending WhatsApp message:", error.message);
     }
 };
