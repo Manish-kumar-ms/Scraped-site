@@ -6,9 +6,15 @@ export const scrapeEvents = async () => {
    
     // Launch Puppeteer
     const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    });
+        headless: "new",  // "true" for cloud, but "new" is recommended for stability
+        args: [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-gpu",
+          "--disable-dev-shm-usage",
+          "--disable-software-rasterizer"
+        ]
+      });
     const page = await browser.newPage();
 
     // Go to the target page
