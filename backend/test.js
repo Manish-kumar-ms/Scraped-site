@@ -65,7 +65,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 
-import { EventModel } from "./model/EventModel.js";
+import { EventModel } from "./model/Eventmodel.js";
 
 export const scrapeEvents = async () => {
     const url = 'https://www.australia.com/en/events/australias-events-calendar.html'; // Target website
