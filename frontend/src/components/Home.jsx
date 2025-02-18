@@ -17,7 +17,7 @@ const Home = () => {
     // Fetch events from backend
     const fetchEvents = async () => {
         try {
-            const response = await fetch("http://localhost:8000/api/event", {
+            const response = await fetch("https://scraped-site-backend.onrender.com/api/event", {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
             });
@@ -51,7 +51,7 @@ const Home = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:8000/api/email/${selectedEvent._id}`, {
+            const response = await fetch(`https://scraped-site-backend.onrender.com/api/email/${selectedEvent._id}`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }),
@@ -81,7 +81,7 @@ const Home = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:8000/api/recommend-event", {
+            const response = await fetch("https://scraped-site-backend.onrender.com/api/recommend-event", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ preferences, location, phoneNumber }),
