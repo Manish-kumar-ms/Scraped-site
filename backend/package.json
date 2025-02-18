@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +12,10 @@
   "description": "",
   "dependencies": {
     "@langchain/google-genai": "^0.1.8",
+    "@sparticuz/chromium-min": "^132.0.0",
+    "axios": "^1.7.9",
     "body-parser": "^1.20.3",
+    "cheerio": "^1.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
@@ -20,7 +23,7 @@
     "mongoose": "^8.10.1",
     "node-cron": "^3.0.3",
     "openai": "^4.85.1",
-    "puppeteer": "^24.2.1",
+    "puppeteer-core": "^24.1.1",
     "twilio": "^5.4.4"
   }
 }

@@ -1,6 +1,6 @@
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import dotenv from "dotenv";
-import { EventModel } from "../model/Eventmodel.js";
+import { EventModel}  from "../model/EventModel.js";
 import { sendWhatsAppNotification } from "./whatsappController.js";
 
 dotenv.config();
@@ -59,7 +59,7 @@ export const recommendEvent = async (req, res) => {
             .join("\n\n");
 
         // 🔹 Send WhatsApp notification
-        await sendWhatsAppNotification(phoneNumber, `🔥 We found some events for you:\n\n${message}`);
+        await sendWhatsAppNotification(phoneNumber, ` We found some events for you:\n\n${message}`);
 
         return res.json({ success: true, recommendations: recommendedEvents });
 
