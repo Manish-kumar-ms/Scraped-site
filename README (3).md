@@ -4,6 +4,11 @@ This project is a **Full Stack MERN Application** that scrapes events from websi
 
 ## 🚀 Features  
 
+## 🌐 Deployment Links
+
+- **Frontend**: [https://scraped-site.onrender.com](https://scraped-site.onrender.com)
+- **Backend**: [https://scraped-site-backend.onrender.com](https://scraped-site-backend.onrender.com)
+
 ### **🔍 Event Scraping & Listing**  
 - Automatically scrapes **Sydney, Australia** events using **Puppeteer**.  
 - Displays upcoming events with **title, date, location, image, and link**.  
